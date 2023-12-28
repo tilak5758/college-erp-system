@@ -31,7 +31,7 @@ export const adminLogin = async (req, res) => {
         id: existingAdmin._id,
       }
       ,
-      "sEcReT",
+      process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
     
